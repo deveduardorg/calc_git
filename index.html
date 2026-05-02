@@ -103,11 +103,14 @@
         }
 
         const info = dadosReciclagem[ItemSelecionado];
-        const result1 = info.v1 * qtd;
+        const conta1 = info.v1 * qtd;
+        const result1 = conta1.toLocaleString("pt-BR");
+
         let mensagemFinal = `Ao reciclar ${qtd} unidade(s), ${result1} ${info.txt1}`;
 
         if (info.v2) {
-          const result2 = info.v2 * qtd;
+          const conta2 = info.v2 * qtd;
+          const result2 = conta2.toLocaleString("pt-BR");
           mensagemFinal += ` e ${result2} ${info.txt2}`;
         }
 
